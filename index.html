@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App with jQuery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+</head>
+<body>
+    <div class="text-center">
+        <h1> MOVIES LIST! </h1>
+        <form id="new-movie" > 
+            <div class="form-group">
+                <label for="title">Movies Title</label>
+                <input type="text" id="title" placeholder="Type movie name" />
+            </div>
+            <div class="form-group">
+                <label for="rating">Rate</label>
+                <input type="number"  min="0" max="10" id="rating" placeholder=" 0 - 10"/>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    <br>
+    <table class="table">
+        <thead class="table-head">
+            <tr>
+                <th scope="col">Movies Title<i id="movie-title" class="fas fas-sort-down" ></i></th>
+                <th scope="col">Rating<i id="movie-rating" class="fas fas-sort-down" ></i></th>
+                <th scope="col">Delete<i></i></th>
+            </tr>
+        </thead>
+        <tbody id="table-body"> 
+
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="app.js">
+        
+    </script>
+</body>
+</html>
