@@ -38,12 +38,12 @@ $(function (){
 
     // when arrow is clicked
     $(".fas").on("click", function(e){
-       let direction = $(e.target).hasClass(fas-sort-down) ? "down" : "up";
+       let direction = $(e.target).hasClass("fa-sort-down") ? "down" : "up";
        let keyToSortBy = $(e.target).attr("id");
        let sortedMovies = sortBy(moviesList, keyToSortBy, direction);
 
        //empty the table
-       $("#new-movie").empty();
+       $("#table-body").empty();
 
        // loop over our object of sortedMovies and append a new row
        for(let movie of sortedMovies){
@@ -67,7 +67,7 @@ function sortBy(array, keyToSortBy, direction){
         if (a[keyToSortBy] > b[keyToSortBy]){
             return direction === "up" ? 1 : -1;
         } else if (b[keyToSortBy] > a[keyToSortBy]) {
-            return direction === "up" ? 1 : -1;
+            return direction === "up" ? -1 : 1;
         }
         return 0;
     })
