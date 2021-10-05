@@ -70,7 +70,7 @@ function sortBy(array, keyToSortBy, direction){
             return direction === "up" ? -1 : 1;
         }
         return 0;
-    })
+    });
 }
 
 // createMovieDataHTML accepts an object with title and rating keys
