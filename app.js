@@ -60,6 +60,7 @@ $(function (){
 // accepts an array of objects and a key and sorts by that key 
 function sortBy(array, keyToSortBy, direction){
     return array.sort(function(a,b) {
+        // since rating is a number, we have to convert these strings to numbers
         if (keyToSortBy === "movie-rating"){
             a[keyToSortBy] = +a[keyToSortBy];
             b[keyToSortBy] = +b[keyToSortBy];
